@@ -10,10 +10,11 @@ lint:
 
 
 test:
-	pytest --cov-report term --cov=perfect_python_project tests/
+	pytest --cov-report term --cov=app tests/
 
 
 format:
 	isort .
+	black .
 
 
