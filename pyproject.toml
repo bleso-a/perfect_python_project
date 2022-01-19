@@ -6,10 +6,26 @@ authors = ["bleso-a <blessingadesiji96@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pytest-cov = "^3.0.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "*"
+black = "*"
+flake8 = "*"
+isort = "*"
+mypy = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.black]
+line-length = 100
+
+[tool.mypy]
+ignore_missing_imports = true
+disallow_untyped_defs = true
